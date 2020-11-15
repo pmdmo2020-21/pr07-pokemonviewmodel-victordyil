@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.selection.SelectionActivity">
+
+    <!-- TODO -->
+
+
+    <ImageButton
+        android:id="@+id/imageButton0"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bulbasur"
+        app:layout_constraintBottom_toTopOf="@+id/rb0"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/rb0"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Bulbasur"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/rb1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton0" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/giratina"
+        app:layout_constraintBottom_toTopOf="@+id/rb1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/rb1"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Giratina"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rb0"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton1" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cubone"
+        app:layout_constraintBottom_toTopOf="@+id/rb2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rb0" />
+
+    <RadioButton
+        android:id="@+id/rb2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Cubone"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintEnd_toStartOf="@+id/rb3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gyarados"
+        app:layout_constraintBottom_toTopOf="@+id/rb3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/rb1" />
+
+    <RadioButton
+        android:id="@+id/rb3"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Gyarados"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rb2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/feebas"
+        app:layout_constraintBottom_toTopOf="@+id/rb4"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rb2" />
+
+    <RadioButton
+        android:id="@+id/rb4"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Feebas"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rb5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pikachu"
+        app:layout_constraintBottom_toTopOf="@+id/rb5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/rb3" />
+
+    <RadioButton
+        android:id="@+id/rb5"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Pikachu"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rb4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
