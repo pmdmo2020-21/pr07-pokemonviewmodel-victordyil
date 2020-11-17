@@ -43,8 +43,8 @@ class BattleActivity : AppCompatActivity() {
     }
 
     private fun setupViews() {
-        reloadPokemon1(viewModel.pokemon1.value!!)
-        reloadPokemon2(viewModel.pokemon2.value!!)
+        reloadPokemon1(viewModel.pokemon1.value ?: Database.getRandomPokemon())
+        reloadPokemon2(viewModel.pokemon2.value ?: Database.getRandomPokemon())
 
         binding.pok1.setOnClickListener {
             selectCall1.launch(SelectionActivity.newIntent(this, viewModel.pokemon1.value!!.id))

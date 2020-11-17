@@ -2,12 +2,14 @@ package es.iessaladillo.pedrojoya.intents.data.local.model
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.os.Parcel
+import android.os.Parcelable
 import androidx.core.content.ContextCompat
 import kotlin.random.Random
 
 data class Pokemon(
     var id: Long, var nombre: String, var tipo: Tipos, var fotoId: Int,
-) {
+) : Parcelable {
 
     enum class Tipos {
         AGUA,
@@ -126,7 +128,35 @@ data class Pokemon(
         }
     }
 
+    constructor(parcel: Parcel) : this(
+        parcel.readLong(),
+        parcel.readString()!!,
+        Tipos.values()[parcel.readInt()],
+        parcel.readInt()) {
+    }
+
     fun getDrawable(context: Context): Drawable {
         return ContextCompat.getDrawable(context, fotoId)!!
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeLong(id)
+        parcel.writeString(nombre)
+        parcel.writeInt(tipo.ordinal)
+        parcel.writeInt(fotoId)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Pokemon> {
+        override fun createFromParcel(parcel: Parcel): Pokemon {
+            return Pokemon(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Pokemon?> {
+            return arrayOfNulls(size)
+        }
     }
 }

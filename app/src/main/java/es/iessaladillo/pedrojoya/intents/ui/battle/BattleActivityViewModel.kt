@@ -15,8 +15,7 @@ class BattleActivityViewModel(savedStateHandle: SavedStateHandle) : ViewModel() 
         savedStateHandle.getLiveData(STATE_POKEMON1, Database.getRandomPokemon())
     val pokemon1: LiveData<Pokemon>
         get() = _pokemon1
-    private val _pokemon2: MutableLiveData<Pokemon> =
-        savedStateHandle.getLiveData(STATE_POKEMON2, Database.getRandomPokemon())
+    private val _pokemon2: MutableLiveData<Pokemon> = savedStateHandle.getLiveData(STATE_POKEMON2, Database.getRandomPokemon())
     val pokemon2: LiveData<Pokemon>
         get() = _pokemon2
 
